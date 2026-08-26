@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Fight - Luta Épica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Fundo animado -->
+        <div class="background">
+            <div class="stars"></div>
+            <div class="stars"></div>
+            <div class="stars"></div>
+        </div>
+
+        <!-- Conteúdo principal -->
+        <div class="content">
+            <!-- Título do jogo -->
+            <div class="title-container">
+                <h1 class="game-title">PIXEL FIGHT</h1>
+                <p class="subtitle">⚔️ Luta Épica em Pixel Art ⚔️</p>
+            </div>
+
+            <!-- Personagens animados -->
+            <div class="characters">
+                <div class="character left">
+                    <div class="pixel-player"></div>
+                    <p>Guerreiro</p>
+                </div>
+                <div class="vs-text">VS</div>
+                <div class="character right">
+                    <div class="pixel-enemy"></div>
+                    <p>Inimigo</p>
+                </div>
+            </div>
+
+            <!-- Botões -->
+            <div class="buttons-container">
+                <button class="btn btn-play" onclick="startGame()">▶ JOGAR</button>
+                <button class="btn btn-options" onclick="openOptions()">⚙ OPÇÕES</button>
+                <button class="btn btn-credits" onclick="openCredits()">📜 CRÉDITOS</button>
+            </div>
+
+            <!-- Informações -->
+            <div class="info-bar">
+                <span>🎮 Use WASD para se mover | SPACE para atacar</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Opções -->
+    <div id="optionsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeOptions()">&times;</span>
+            <h2>OPÇÕES</h2>
+            <div class="option-item">
+                <label>Volume:</label>
+                <input type="range" min="0" max="100" value="70" class="slider">
+            </div>
+            <div class="option-item">
+                <label>Dificuldade:</label>
+                <select class="select-difficulty">
+                    <option>Fácil</option>
+                    <option>Normal</option>
+                    <option>Difícil</option>
+                </select>
+            </div>
+            <div class="option-item">
+                <label>
+                    <input type="checkbox" checked> Efeitos Sonoros
+                </label>
+            </div>
+            <button class="btn btn-play" onclick="closeOptions()">VOLTAR</button>
+        </div>
+    </div>
+
+    <!-- Modal de Créditos -->
+    <div id="creditsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCredits()">&times;</span>
+            <h2>CRÉDITOS</h2>
+            <p><strong>Desenvolvido por:</strong> userlipehot-jpg</p>
+            <p><strong>Pixel Art Game</strong></p>
+            <p>2026 - Todos os direitos reservados</p>
+            <p style="margin-top: 20px; font-size: 12px; opacity: 0.7;">Feito com ❤️ e muita luta</p>
+            <button class="btn btn-play" onclick="closeCredits()">VOLTAR</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
